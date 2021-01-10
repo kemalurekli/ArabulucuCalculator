@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">Arabulucu Hesapmatik</string>
+    <string name="totalprice_name">Toplam Tutar : </string>
+    <string name="calculate_button_name">Hesapla</string>
+    <string name="price_input_name">Hesaplanacak Ücret</string>
+    <string name="input_time_name">Saat Giriniz.</string>
+    <string name="explanation_name">Açıklama</string>
+    <string name="menu1_name">Arabuluculuk Ücreti Hesaplama \n(Saat Ücreti - AAÜT Birinci Kısım)</string>
+    <string name="menu2_name">Arabuluculuk Ücreti Hesaplama \n(Nisbi Ücreti - AAÜT İkinci Kısım)</string>
+    <string name="menu3_name">Arabuluculuk Serbest Meslek \nMakbuzu Hesaplama</string>
+    <string name="menu4_name">Dava Şartı Uygulamalarında \nSüre Hesaplama</string>
+    <string name="menu5_name">2020 Yılı Arabuluculuk \nAsgari Ücret Tarifesi</string>
+    <string name="menu6_name">Savcılıklara Düzenlenecek \nMakbuz Örnekleri</string>
+    <string name="price_part">Ücret Dilimi</string>
+    <string name="ratio_name">Oran</string>
+    <string name="arbitrager_price_name">Arabuluculuk Ücreti</string>
+    <string name="two_part_name">2 taraflı işlerde</string>
+    <string name="threeandfive_part_name">3-5 taraflı işlerde</string>
+    <string name="sixandten_part_name">6-10 taraflı işlerde</string>
+    <string name="more_eleven_part_name">11 ve daha fazla taraflı işlerde</string>
+    <string name="one_referee_name">Bir arabulucu görev yaparsa</string>
+    <string name="more_referee_name">Birden fazla arabulucu görev yaparsa</string>
+
+
+
+</resources>
