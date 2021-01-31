@@ -13,6 +13,7 @@ public enum SubDisagreementType {
         this.value = value;
     }
     public int getValue(){
+
         return value;
     }
 }

@@ -33,12 +33,6 @@ public class ProportionalPriceSecondPart extends AppCompatActivity {
     int selection1, selection2, selection3, selection4;
 
 
-
-
-
-
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -63,9 +57,6 @@ public class ProportionalPriceSecondPart extends AppCompatActivity {
         spinner2 = (Spinner) findViewById(R.id.thirdInput);
         spinner3 = (Spinner) findViewById(R.id.fourthInput);
         spinner4 = (Spinner) findViewById(R.id.fifthInput);
-
-
-
         //================================================SPİNNER 1 ================================================//
         arrayList_mediator = new ArrayList<>();
         arrayList_mediator.add(getString(R.string.one_referee_name));
@@ -81,10 +72,6 @@ public class ProportionalPriceSecondPart extends AppCompatActivity {
         spinner2.setAdapter(arrayAdapter_selector2);
         //================================================SPİNNER 2 FİNİSH ================================================//
 
-
-
-
-
         //========================================Spinner 1 GETTİNG VALUE ====================================//
         spinner1.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
@@ -98,7 +85,6 @@ public class ProportionalPriceSecondPart extends AppCompatActivity {
 
             }
         });
-
         //======================================== For Spinner 3's VALUES ====================================//
         arrayList_option1 = new ArrayList<>();
         arrayList_option1.add("İş Hukuku Uyuşmazlıkları");
@@ -110,8 +96,6 @@ public class ProportionalPriceSecondPart extends AppCompatActivity {
         arrayList_option2.add("İş Hukuku Uyuşmazlıkları");
         arrayList_option2.add("Tüketici Uyuşmazlıkları");
         arrayList_option2.add("Diğer Tür Uyuşmazlıklar");
-
-
         //========================================Spinner 2 GETTİNG VALUE AND ADJUSTMENT SPİNNER 3 ====================================//
         spinner2.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
@@ -127,15 +111,11 @@ public class ProportionalPriceSecondPart extends AppCompatActivity {
                 System.out.println(selection2);
                 spinner3.setAdapter(arrayAdapter_parties);
             }
-
             @Override
             public void onNothingSelected(AdapterView<?> parent) {
 
             }
         });
-
-
-
         //========================================Spinner 3 GETTİNG VALUE ====================================//
 
         spinner3.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
@@ -150,10 +130,6 @@ public class ProportionalPriceSecondPart extends AppCompatActivity {
 
             }
         });
-
-
-
-
         //================================================SPİNNER 4 ================================================//
         arrayList_people = new ArrayList<>();
         arrayList_people.add(getString(R.string.two_part_name));
@@ -163,10 +139,6 @@ public class ProportionalPriceSecondPart extends AppCompatActivity {
         arrayAdapter_selector3 = new ArrayAdapter<>(getApplicationContext(), android.R.layout.simple_spinner_item, arrayList_people);
         spinner4.setAdapter(arrayAdapter_selector3);
         //================================================SPİNNER 4 FİNİSH ================================================//
-
-
-
-
 
         //========================================Spinner 4 GETTİNG VALUE ====================================//
         spinner4.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
@@ -183,14 +155,6 @@ public class ProportionalPriceSecondPart extends AppCompatActivity {
         });
 
         //=======================================================================================================================//
-
-
-
-
-
-
-
-
     }
     public void timeToPriceCalc(View view){
         if (inputTime.getText().toString().matches("")){
@@ -204,8 +168,6 @@ public class ProportionalPriceSecondPart extends AppCompatActivity {
             intent.putExtra("select3",selection3);
             intent.putExtra("select4",selection4);
             startActivity(intent);
-
-
         }
 
     }
