@@ -14,13 +14,6 @@ public class SecondPartDetails extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_second_part_details);
-        LinearLayout layout45 = findViewById(R.id.layout45000);
-        LinearLayout layout80 = findViewById(R.id.layout80000);
-        LinearLayout layout240 = findViewById(R.id.layout240000);
-        LinearLayout layout600 = findViewById(R.id.layout600000);
-        LinearLayout layout750 = findViewById(R.id.layout750000);
-        LinearLayout layout1250 = findViewById(R.id.layout1250000);
-        LinearLayout layout3000 = findViewById(R.id.layout3000000);
         TextView tvExplanation = findViewById(R.id.tvExplanation);
         TextView tvr35 = findViewById(R.id.tvr35);
         TextView tvr45 = findViewById(R.id.tvr45);
@@ -49,9 +42,6 @@ public class SecondPartDetails extends AppCompatActivity {
         int select4 = intent.getIntExtra("select4", 0);
         Double ratio, result;
 
-
-
-
         switch (select1) {
             case 0:
                 tvr35.setText("%6");
@@ -74,17 +64,7 @@ public class SecondPartDetails extends AppCompatActivity {
                 tvr3000.setText("%1");
                 break;
         }
-
-
         if (userinput <= 50000) {
-            System.out.println("küçük 35");
-            layout45.setVisibility(View.INVISIBLE);
-            layout80.setVisibility(View.INVISIBLE);
-            layout240.setVisibility(View.INVISIBLE);
-            layout600.setVisibility(View.INVISIBLE);
-            layout750.setVisibility(View.INVISIBLE);
-            layout1250.setVisibility(View.INVISIBLE);
-            layout3000.setVisibility(View.INVISIBLE);
             switch (select1) {
                 case 0:
                     ratio = 0.06;
@@ -104,13 +84,6 @@ public class SecondPartDetails extends AppCompatActivity {
                     break;
             }
         } else if (userinput <= 130000) {
-            System.out.println("küçük 45");
-            layout80.setVisibility(View.INVISIBLE);
-            layout240.setVisibility(View.INVISIBLE);
-            layout600.setVisibility(View.INVISIBLE);
-            layout750.setVisibility(View.INVISIBLE);
-            layout1250.setVisibility(View.INVISIBLE);
-            layout3000.setVisibility(View.INVISIBLE);
             switch (select1) {
                 case 0:
                     tvp35.setText("₺3.000,00");
@@ -128,12 +101,6 @@ public class SecondPartDetails extends AppCompatActivity {
                     break;
             }
         } else if (userinput <= 260000) {
-            System.out.println("küçük 80");
-            layout240.setVisibility(View.INVISIBLE);
-            layout600.setVisibility(View.INVISIBLE);
-            layout750.setVisibility(View.INVISIBLE);
-            layout1250.setVisibility(View.INVISIBLE);
-            layout3000.setVisibility(View.INVISIBLE);
             switch (select1) {
                 case 0:
                     tvp35.setText("₺3.000,00");
@@ -153,11 +120,6 @@ public class SecondPartDetails extends AppCompatActivity {
                     break;
             }
         } else if (userinput <= 520000) {
-            System.out.println("küçük 240");
-            layout600.setVisibility(View.INVISIBLE);
-            layout750.setVisibility(View.INVISIBLE);
-            layout1250.setVisibility(View.INVISIBLE);
-            layout3000.setVisibility(View.INVISIBLE);
             switch (select1) {
                 case 0:
                     tvp35.setText("₺3.000,00");
@@ -179,10 +141,6 @@ public class SecondPartDetails extends AppCompatActivity {
                     break;
             }
         } else if (userinput <= 1300000) {
-            System.out.println("küçük 600");
-            layout750.setVisibility(View.INVISIBLE);
-            layout1250.setVisibility(View.INVISIBLE);
-            layout3000.setVisibility(View.INVISIBLE);
             switch (select1) {
                 case 0:
                     tvp35.setText("₺3.000,00");
@@ -206,9 +164,6 @@ public class SecondPartDetails extends AppCompatActivity {
                     break;
             }
         } else if (userinput <= 2340000) {
-            System.out.println("küçük 750");
-            layout1250.setVisibility(View.INVISIBLE);
-            layout3000.setVisibility(View.INVISIBLE);
             switch (select1) {
                 case 0:
                     tvp35.setText("₺3.000,00");
@@ -234,8 +189,6 @@ public class SecondPartDetails extends AppCompatActivity {
                     break;
             }
         } else if (userinput <= 4420000) {
-            System.out.println("küçük 1250");
-            layout3000.setVisibility(View.INVISIBLE);
             switch (select1) {
                 case 0:
                     tvp35.setText("₺3.000,00");
@@ -263,7 +216,6 @@ public class SecondPartDetails extends AppCompatActivity {
                     break;
             }
         } else if (userinput > 4420000) {
-            System.out.println("büyük 3000");
             switch (select1) {
                 case 0:
                     tvp35.setText("₺3.000,00");
@@ -296,11 +248,9 @@ public class SecondPartDetails extends AppCompatActivity {
         }
         tvExplanation.setText("₺ " + userinput + " Anlaşma Tutarlı arabuluculuk ücreti");
     }
-
     private double minPriceCheck(Double result, int select2, int select3, int select4) {
         if (result<680 && select2==0 && select3==0 && select4==0){
             result=680.0;
-            System.out.println("hey ben çalışıyorum");
         }else if (result<720 && select2==0 && select3==0 && select4==1){
             result=720.0;
         }else if (result<760 && select2==0 && select3==0 && select4==2){
@@ -358,5 +308,4 @@ public class SecondPartDetails extends AppCompatActivity {
         }
         return result;
     }
-
 }
