@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     tools:context=".ProportionalPriceSecondPart"
+    android:orientation="vertical"
     tools:layout_editor_absoluteY="25dp">
 
 
@@ -22,58 +23,41 @@
 
         <EditText
             android:id="@+id/inputTime"
-            android:layout_width="380dp"
+            android:layout_width="match_parent"
             android:layout_height="50dp"
-            android:autofillHints=""
             android:background="@drawable/inputareastyle"
-            android:ems="10"
             android:hint="@string/price_input_name"
+            android:layout_margin="8dp"
             android:inputType="numberDecimal"
             android:paddingLeft="10dp" />
 
-        <Space
-            android:layout_width="match_parent"
-            android:layout_height="15dp" />
-
         <Spinner
             android:id="@+id/secondInput"
-            android:layout_width="380dp"
-            android:layout_height="50dp"
-            android:background="@drawable/inputareastyle" />
-
-        <Space
             android:layout_width="match_parent"
-            android:layout_height="15dp" />
+            android:layout_height="50dp"
+            android:layout_margin="8dp"
+            android:background="@drawable/inputareastyle" />
 
         <Spinner
             android:id="@+id/thirdInput"
-            android:layout_width="380dp"
-            android:layout_height="50dp"
-            android:background="@drawable/inputareastyle" />
-
-        <Space
             android:layout_width="match_parent"
-            android:layout_height="15dp" />
+            android:layout_height="50dp"
+            android:layout_margin="8dp"
+            android:background="@drawable/inputareastyle" />
 
         <Spinner
             android:id="@+id/fourthInput"
-            android:layout_width="380dp"
+            android:layout_width="match_parent"
+            android:layout_margin="8dp"
             android:layout_height="50dp"
             android:background="@drawable/inputareastyle" />
-
-        <Space
-            android:layout_width="match_parent"
-            android:layout_height="15dp" />
 
         <Spinner
             android:id="@+id/fifthInput"
-            android:layout_width="380dp"
-            android:layout_height="50dp"
-            android:background="@drawable/inputareastyle" />
-
-        <Space
             android:layout_width="match_parent"
-            android:layout_height="35dp" />
+            android:layout_height="50dp"
+            android:layout_margin="8dp"
+            android:background="@drawable/inputareastyle" />
 
     </LinearLayout>
 
@@ -96,6 +80,7 @@
             android:layout_height="wrap_content"
             android:background="@drawable/mainmenubuttonsyle"
             android:onClick="timeToPriceCalc"
+            android:layout_margin="8dp"
             android:text="@string/calculate_button_name"
             android:textColor="#FFFFFF" />
 
@@ -125,4 +110,4 @@
     </LinearLayout>
 
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>

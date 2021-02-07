@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     android:paddingTop="10dp"
     tools:context=".TimeToPriceFirstPart">
 
@@ -20,38 +21,30 @@
 
         <EditText
             android:id="@+id/inputTime"
-            android:layout_width="380dp"
+            android:layout_width="match_parent"
             android:layout_height="50dp"
             android:autofillHints=""
+            android:layout_margin="8dp"
             android:background="@drawable/inputareastyle"
-            android:ems="10"
             android:hint="@string/input_time_name"
             android:inputType="number"
-            android:paddingLeft="10dp" />
 
-        <Space
-            android:layout_width="match_parent"
-            android:layout_height="10dp" />
+            android:paddingLeft="10dp" />
 
         <Spinner
             android:id="@+id/secondInput"
-            android:layout_width="380dp"
-            android:layout_height="50dp"
-            android:background="@drawable/inputareastyle" />
-
-        <Space
             android:layout_width="match_parent"
-            android:layout_height="10dp" />
+            android:layout_height="50dp"
+            android:layout_margin="8dp"
+            android:background="@drawable/inputareastyle" />
 
         <Spinner
             android:id="@+id/thirdInput"
-            android:layout_width="380dp"
+            android:layout_width="match_parent"
             android:layout_height="50dp"
+            android:layout_margin="8dp"
             android:background="@drawable/inputareastyle" />
 
-        <Space
-            android:layout_width="match_parent"
-            android:layout_height="35dp" />
     </LinearLayout>
 
     <LinearLayout
@@ -59,14 +52,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="right"
-        android:orientation="vertical"
-        android:paddingTop="10dp"
-        android:paddingRight="15dp"
-        android:paddingBottom="10dp"
-        app:layout_constraintBottom_toTopOf="@+id/linearLayout5"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout3">
+        android:orientation="vertical">
 
         <Button
             android:id="@+id/calculateButton"
@@ -74,6 +60,7 @@
             android:layout_height="wrap_content"
             android:background="@drawable/mainmenubuttonsyle"
             android:onClick="timeToPriceCalc"
+            android:layout_margin="10dp"
             android:text="@string/calculate_button_name"
             android:textColor="#FFFFFF" />
     </LinearLayout>
@@ -127,11 +114,7 @@
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:gravity="center"
-        android:orientation="vertical"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout5">
+        android:orientation="vertical">
 
 
         <com.google.android.gms.ads.AdView xmlns:ads="http://schemas.android.com/apk/res-auto"
@@ -144,4 +127,4 @@
             ads:adUnitId="ca-app-pub-3940256099942544/6300978111"></com.google.android.gms.ads.AdView>
     </LinearLayout>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>

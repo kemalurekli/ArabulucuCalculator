@@ -23,4 +23,8 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(MainActivity.this, ProportionalPriceSecondPart.class);
         startActivity(intent);
     }
+    public void goTimeCalc(View view) {
+        Intent intent = new Intent(MainActivity.this, TimeCalcThirdPart.class);
+        startActivity(intent);
+    }
 }
