@@ -3,14 +3,11 @@ package com.example.arabulucuhesapmatik;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.DatePickerDialog;
-import android.graphics.Color;
-import android.graphics.drawable.ColorDrawable;
+
 import android.os.Bundle;
 import android.view.View;
 import android.widget.DatePicker;
-import android.widget.EditText;
 import android.widget.TextView;
-
 import java.util.Calendar;
 
 public class TimeCalcThirdPart extends AppCompatActivity {
@@ -32,17 +29,30 @@ public class TimeCalcThirdPart extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 DatePickerDialog datePickerDialog = new DatePickerDialog(TimeCalcThirdPart.this, new DatePickerDialog.OnDateSetListener() {
+
                     @Override
-                    public void onDateSet(DatePicker datePicker, int year, int month, int day) {
-                        month=month+1;
-                        String date = day + "/"+ month + "/"+ year;
+                    public void onDateSet(DatePicker datePicker, int selectedYear, int selectedMonth, int selectedDay) {
+                        Calendar calendarNew = Calendar.getInstance();
+                        calendarNew.set(selectedYear,selectedMonth,selectedDay);
+                        calendarNew.add(calendarNew.DATE,21);
+                        int threeWeekD = (calendarNew.get(Calendar.DAY_OF_MONTH));
+                        int threeWeekM = calendarNew.get(Calendar.MONTH);
+                        threeWeekM=threeWeekM+1;
+                        int threeWeekY = calendarNew.get(Calendar.YEAR);
+
+                        //TextView's Text
+                        selectedMonth=selectedMonth+1;
+                        String date = selectedDay + "/"+ selectedMonth + "/"+ selectedYear;
                         tvDate.setText(date);
-                        //Calendar newDate = calendar.set(0,0,0,7,0,0);
-                        date_text.setText("Date is : " + date);
+                        //TextView's Text
+
+
+                        date_text.setText("Date is : " + threeWeekD +"/"+threeWeekM+"/"+threeWeekY);
                     }
                 },year,month,day);
                 datePickerDialog.show();
             }
+
         });
 
     }
