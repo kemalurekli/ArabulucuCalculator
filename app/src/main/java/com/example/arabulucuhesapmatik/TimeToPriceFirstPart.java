@@ -25,14 +25,14 @@ public class TimeToPriceFirstPart extends AppCompatActivity {
 
 
     private AdView mAdView;
-    EditText inputTime;
-    TextView definition, totalPrice;
-    Spinner topics, parties;
-    Button button;
+    private EditText inputTime;
+    private TextView definition, totalPrice;
+    private Spinner topics, parties;
+    private Button button;
 
-    ArrayList<String> arrayList_parties;
-    ArrayAdapter<String> arrayAdapter_topics, arrayAdapter_parties;
-    int selection, subselection;
+    private ArrayList<String> arrayList_parties;
+    private ArrayAdapter<String> arrayAdapter_topics, arrayAdapter_parties;
+    private int selection, subselection;
 
 
     @Override
@@ -122,7 +122,6 @@ public class TimeToPriceFirstPart extends AppCompatActivity {
                 } else if (subselection == SubDisagreementType.ELEVEN.getValue()) {
                     calculateAndSet(hour, 400, 0, 3);
                 }
-
             } else if (selection == DisagreementType.TICARI.getValue()) {
                 if (subselection == 0) {
                     calculateAndSet(hour, 660, 1, 0);
@@ -164,8 +163,6 @@ public class TimeToPriceFirstPart extends AppCompatActivity {
                     calculateAndSet(hour, 470, 4, 3);
                 }
             }
-
         }
-
     }
 }

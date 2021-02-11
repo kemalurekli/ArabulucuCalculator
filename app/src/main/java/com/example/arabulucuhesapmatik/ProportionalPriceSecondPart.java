@@ -24,12 +24,12 @@ import java.util.ArrayList;
 public class ProportionalPriceSecondPart extends AppCompatActivity {
 
     private AdView mAdView;
-    EditText inputTime;
-    TextView definition, totalPrice;
-    Spinner spinner1, spinner2, spinner3, spinner4;
-    Button button;
-    ArrayList<String> arrayList_mediator, arrayList_casetype, arrayList_option1, arrayList_option2, arrayList_people;
-    ArrayAdapter<String> arrayAdapter_mediator, arrayAdapter_parties, arrayAdapter_selector2, arrayAdapter_selector3;
+    private EditText inputTime;
+    private TextView definition, totalPrice;
+    private Spinner spinner1, spinner2, spinner3, spinner4;
+    private Button button;
+    private ArrayList<String> arrayList_mediator, arrayList_casetype, arrayList_option1, arrayList_option2, arrayList_people;
+    private ArrayAdapter<String> arrayAdapter_mediator, arrayAdapter_parties, arrayAdapter_selector2, arrayAdapter_selector3;
     int selection1, selection2, selection3, selection4;
 
 
@@ -157,8 +157,8 @@ public class ProportionalPriceSecondPart extends AppCompatActivity {
         //=======================================================================================================================//
     }
     public void timeToPriceCalc(View view){
-        if (inputTime.getText().toString().matches("")){
-            Toast.makeText(this,"Lütfen Ücreti Giriniz.", Toast.LENGTH_SHORT).show();
+        if (inputTime.getText().toString().matches("") || Double.parseDouble(inputTime.getText().toString())>100000000){
+            Toast.makeText(this,"Geçersiz Ücret!", Toast.LENGTH_SHORT).show();
         } else {
             Intent intent = new Intent(ProportionalPriceSecondPart.this,SecondPartDetails.class);
             double userValue = Double.parseDouble(inputTime.getText().toString());
