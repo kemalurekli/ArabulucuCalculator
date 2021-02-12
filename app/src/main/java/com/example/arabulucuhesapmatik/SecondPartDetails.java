@@ -32,8 +32,7 @@ public class SecondPartDetails extends AppCompatActivity {
         TextView tvp1250 = findViewById(R.id.tvp1250);
         TextView tvp3000 = findViewById(R.id.tvp3000);
         TextView totalPrice = findViewById(R.id.totalprice);
-
-
+        //Getting Values from previous activity.
         Intent intent = getIntent();
         double userinput = intent.getDoubleExtra("userInput", 0);
         int select1 = intent.getIntExtra("select1", 0);
@@ -42,6 +41,7 @@ public class SecondPartDetails extends AppCompatActivity {
         int select4 = intent.getIntExtra("select4", 0);
         Double ratio, result;
 
+        //setting ratio text For select1
         switch (select1) {
             case 0:
                 tvr35.setText("%6");

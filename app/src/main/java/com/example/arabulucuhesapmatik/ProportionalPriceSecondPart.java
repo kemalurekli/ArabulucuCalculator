@@ -30,7 +30,7 @@ public class ProportionalPriceSecondPart extends AppCompatActivity {
     private Button button;
     private ArrayList<String> arrayList_mediator, arrayList_casetype, arrayList_option1, arrayList_option2, arrayList_people;
     private ArrayAdapter<String> arrayAdapter_mediator, arrayAdapter_parties, arrayAdapter_selector2, arrayAdapter_selector3;
-    int selection1, selection2, selection3, selection4;
+    private int selection1, selection2, selection3, selection4;
 
 
     @Override

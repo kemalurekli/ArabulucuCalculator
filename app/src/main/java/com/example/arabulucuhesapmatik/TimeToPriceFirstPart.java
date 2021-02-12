@@ -29,7 +29,6 @@ public class TimeToPriceFirstPart extends AppCompatActivity {
     private TextView definition, totalPrice;
     private Spinner topics, parties;
     private Button button;
-
     private ArrayList<String> arrayList_parties;
     private ArrayAdapter<String> arrayAdapter_topics, arrayAdapter_parties;
     private int selection, subselection;

@@ -1,30 +1,41 @@
 package com.example.arabulucuhesapmatik;
-
 import androidx.appcompat.app.AppCompatActivity;
-
 import android.app.DatePickerDialog;
-
 import android.os.Bundle;
 import android.view.View;
 import android.widget.DatePicker;
 import android.widget.TextView;
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.MobileAds;
+import com.google.android.gms.ads.initialization.InitializationStatus;
+import com.google.android.gms.ads.initialization.OnInitializationCompleteListener;
 import java.util.Calendar;
-
 public class TimeCalcThirdPart extends AppCompatActivity {
-
+    private AdView mAdView;
     private DatePickerDialog.OnDateSetListener setListener;
-    private TextView tvDate, is_uc, is_dort,tuketici_uc,tuketici_dort,ticari_alti, ticari_sekiz;
+    private TextView tvDate, workThreeWeek, workFourWeek,consumerThreeWeek,consumerFourWeek,commercialSixWeek, commercialEightWeek;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_time_calc_third_part);
+        //FOR ADS
+        MobileAds.initialize(this, new OnInitializationCompleteListener() {
+            @Override
+            public void onInitializationComplete(InitializationStatus initializationStatus) {
+            }
+        });
+        mAdView = findViewById(R.id.adView);
+        AdRequest adRequest = new AdRequest.Builder().build();
+        mAdView.loadAd(adRequest);
+        // FOR ADS END
         tvDate = findViewById(R.id.tvDate);
-        is_uc = findViewById(R.id.is_uc);
-        is_dort = findViewById(R.id.is_dort);
-        tuketici_uc = findViewById(R.id.tuketici_uc);
-        tuketici_dort = findViewById(R.id.tuketici_dort);
-        ticari_alti = findViewById(R.id.ticari_alti);
-        ticari_sekiz = findViewById(R.id.ticari_sekiz);
+        workThreeWeek = findViewById(R.id.workThreeWeek);
+        workFourWeek = findViewById(R.id.workFourWeek);
+        consumerThreeWeek = findViewById(R.id.consumerThreeWeek);
+        consumerFourWeek = findViewById(R.id.consumerFourWeek);
+        commercialSixWeek = findViewById(R.id.commercialSixWeek);
+        commercialEightWeek = findViewById(R.id.commercialEightWeek);
         final Calendar calendar = Calendar.getInstance();
         final int year = calendar.get(Calendar.YEAR);
         final int month = calendar.get(Calendar.MONTH);
@@ -80,17 +91,16 @@ public class TimeCalcThirdPart extends AppCompatActivity {
                         tvDate.setText(date);
                         //TextView's Text
 
-                        is_uc.setText(threeWeekD + "/" + threeWeekM + "/" + threeWeekY);
-                        is_dort.setText(fourWeekD + "/" + fourWeekM + "/" + fourWeekY);
-                        tuketici_uc.setText(threeWeekD + "/" + threeWeekM + "/" + threeWeekY);
-                        tuketici_dort.setText(fourWeekD + "/" + fourWeekM + "/" + fourWeekY);
-                        ticari_alti.setText(sixWeekD + "/" + sixWeekM + "/" + sixWeekY);
-                        ticari_sekiz.setText(eightWeekD + "/" + eightWeekM + "/" + eightWeekY);
+                        workThreeWeek.setText(threeWeekD + "/" + threeWeekM + "/" + threeWeekY);
+                        workFourWeek.setText(fourWeekD + "/" + fourWeekM + "/" + fourWeekY);
+                        consumerThreeWeek.setText(threeWeekD + "/" + threeWeekM + "/" + threeWeekY);
+                        consumerFourWeek.setText(fourWeekD + "/" + fourWeekM + "/" + fourWeekY);
+                        commercialSixWeek.setText(sixWeekD + "/" + sixWeekM + "/" + sixWeekY);
+                        commercialEightWeek.setText(eightWeekD + "/" + eightWeekM + "/" + eightWeekY);
                     }
                 },year,month,day);
                 datePickerDialog.show();
             }
-
         });
 
     }
