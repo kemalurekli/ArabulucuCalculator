@@ -71,178 +71,177 @@ public class SecondPartDetails extends AppCompatActivity {
                     result = userinput * ratio;
                     //---------------------------Min Price Check-----------------------------------
                     result = minPriceCheck(result,select2,select3,select4);
-                    tvp35.setText(String.valueOf(result));
-                    totalPrice.setText("Toplam Tutar :  ₺" + (result));
+                    tvp35.setText("₺" + (String.format( "%.2f",result)));
+                    totalPrice.setText("Toplam Tutar :  ₺" + (String.format( "%.2f",result)));
                     break;
                 case 1:
                     ratio = 0.09;
                     result = userinput * ratio;
                     //---------------------------Min Price Check-----------------------------------
                     result = minPriceCheck(result,select2,select3,select4);
-                    tvp35.setText(String.valueOf(result));
-                    totalPrice.setText("Toplam Tutar :  ₺" + (result));
+                    tvp35.setText("₺" + String.format( "%.2f",result));
+                    totalPrice.setText("Toplam Tutar :  ₺" + (String.format( "%.2f",result)));
                     break;
             }
         } else if (userinput <= 130000) {
             switch (select1) {
                 case 0:
-                    tvp35.setText("₺3.000,00");
+                    tvp35.setText("₺3000.00");
                     ratio = 0.05;
                     result = ((userinput - 50000) * ratio);
-                    tvp45.setText("₺" + (result));
-                    totalPrice.setText("Toplam Tutar :  ₺" + ((result + 3000)));
+                    tvp45.setText("₺" + String.format( "%.2f",result));
+                    totalPrice.setText("Toplam Tutar :  ₺" + (String.format( "%.2f",result + 3000)));
                     break;
                 case 1:
-                    tvp35.setText("₺4.500,00");
+                    tvp35.setText("₺4500.00");
                     ratio = 0.075;
                     result = ((userinput - 50000) * ratio);
-                    tvp45.setText("₺" + (result));
-                    totalPrice.setText("Toplam Tutar :  ₺" + ((result + 4500)));
+                    tvp45.setText("₺" + (String.format( "%.2f",result)));
+                    totalPrice.setText("Toplam Tutar :  ₺" + (String.format( "%.2f",result + 4500)));
                     break;
             }
         } else if (userinput <= 260000) {
             switch (select1) {
                 case 0:
-                    tvp35.setText("₺3.000,00");
-                    tvp45.setText("₺4.000,00");
+                    tvp35.setText("₺3000.00");
+                    tvp45.setText("₺4000.00");
                     ratio = 0.04;
                     result = ((userinput - 130000) * ratio);
-                    tvp80.setText("₺" + (result));
-                    totalPrice.setText("Toplam Tutar :  ₺" + ((result + 7000)));
+                    tvp80.setText("₺" + String.format( "%.2f",result));
+                    totalPrice.setText("Toplam Tutar :  ₺" + (String.format( "%.2f",result + 7000)));
                     break;
                 case 1:
-                    tvp35.setText("₺4.500,00");
-                    tvp45.setText("₺6.000,00");
+                    tvp35.setText("₺4500.00");
+                    tvp45.setText("₺6000.00");
                     ratio = 0.06;
                     result = ((userinput - 130000) * ratio);
-                    tvp80.setText("₺" + (result));
-                    totalPrice.setText("Toplam Tutar :  ₺" + ((result + 10500)));
+                    tvp80.setText("₺" + String.format( "%.2f",result));
+                    totalPrice.setText("Toplam Tutar :  ₺" + (String.format( "%.2f",result + 10500)));
                     break;
             }
         } else if (userinput <= 520000) {
             switch (select1) {
                 case 0:
-                    tvp35.setText("₺3.000,00");
-                    tvp45.setText("₺4.000,00");
-                    tvp80.setText("₺5.200,00");
+                    tvp35.setText("₺3000.00");
+                    tvp45.setText("₺4000.00");
+                    tvp80.setText("₺5200.00");
                     ratio = 0.03;
                     result = ((userinput - 260000) * ratio);
-                    tvp240.setText("₺" + (result));
-                    totalPrice.setText("Toplam Tutar :  ₺" + ((result + 12200)));
+                    tvp240.setText("₺" + String.format( "%.2f",result));
+                    totalPrice.setText("Toplam Tutar :  ₺" + (String.format( "%.2f",result + 12200)));
                     break;
                 case 1:
-                    tvp35.setText("₺4.500,00");
-                    tvp45.setText("₺6.000,00");
-                    tvp80.setText("₺7.800,00");
+                    tvp35.setText("₺4500.00");
+                    tvp45.setText("₺6000.00");
+                    tvp80.setText("₺7800.00");
                     ratio = 0.045;
                     result = ((userinput - 260000) * ratio);
-                    tvp240.setText("₺" + (result));
-                    totalPrice.setText("Toplam Tutar :  ₺" + ((result + 18300)));
+                    tvp240.setText("₺" + String.format( "%.2f",result));
+                    totalPrice.setText("Toplam Tutar :  ₺" + (String.format( "%.2f",result + 18300)));
                     break;
             }
         } else if (userinput <= 1300000) {
             switch (select1) {
                 case 0:
-                    tvp35.setText("₺3.000,00");
-                    tvp45.setText("₺4.000,00");
-                    tvp80.setText("₺5.200,00");
-                    tvp240.setText("₺7.800,00");
+                    tvp35.setText("₺3000.00");
+                    tvp45.setText("₺4000.00");
+                    tvp80.setText("₺5200.00");
+                    tvp240.setText("₺7800.00");
                     ratio = 0.02;
                     result = ((userinput - 520000) * ratio);
-                    tvp600.setText("₺" + (result));
-                    totalPrice.setText("Toplam Tutar :  ₺" + ((result + 20000)));
+                    tvp600.setText("₺" + String.format( "%.2f",result));
+                    totalPrice.setText("Toplam Tutar :  ₺" + (String.format( "%.2f",result + 20000)));
                     break;
                 case 1:
-                    tvp35.setText("₺4.500,00");
-                    tvp45.setText("₺6.000,00");
-                    tvp80.setText("₺7.800,00");
-                    tvp240.setText("₺11.700,00");
+                    tvp35.setText("₺4500.00");
+                    tvp45.setText("₺6000.00");
+                    tvp80.setText("₺7800.00");
+                    tvp240.setText("₺11700.0");
                     ratio = 0.03;
                     result = ((userinput - 520000) * ratio);
-                    tvp600.setText("₺" + (result));
-                    totalPrice.setText("Toplam Tutar :  ₺" + ((result + 30000)));
+                    tvp600.setText("₺" + String.format( "%.2f",result));
+                    totalPrice.setText("Toplam Tutar :  ₺" + (String.format( "%.2f",result + 30000)));
                     break;
             }
         } else if (userinput <= 2340000) {
             switch (select1) {
                 case 0:
-                    tvp35.setText("₺3.000,00");
-                    tvp45.setText("₺4.000,00");
-                    tvp80.setText("₺5.200,00");
-                    tvp240.setText("₺7.800,00");
-                    tvp600.setText("₺15.600,00");
+                    tvp35.setText("₺3000.00");
+                    tvp45.setText("₺4000.00");
+                    tvp80.setText("₺5200.00");
+                    tvp240.setText("₺7800.00");
+                    tvp600.setText("₺15600.00");
                     ratio = 0.015;
                     result = ((userinput - 1300000) * ratio);
-                    tvp750.setText("₺" + (result));
-                    totalPrice.setText("Toplam Tutar :  ₺" + ((result + 35600)));
+                    tvp750.setText("₺" + String.format( "%.2f",result));
+                    totalPrice.setText("Toplam Tutar :  ₺" + (String.format( "%.2f",result + 35600)));
                     break;
                 case 1:
-                    tvp35.setText("₺4.500,00");
-                    tvp45.setText("₺6.000,00");
-                    tvp80.setText("₺7.800,00");
-                    tvp240.setText("₺11.700,00");
-                    tvp600.setText("₺23.400,00");
+                    tvp35.setText("₺4500.00");
+                    tvp45.setText("₺6000.00");
+                    tvp80.setText("₺7800.00");
+                    tvp240.setText("₺11700.0");
+                    tvp600.setText("₺23400.00");
                     ratio = 0.025;
                     result = ((userinput - 1300000) * ratio);
-                    tvp750.setText("₺" + (result));
-                    totalPrice.setText("Toplam Tutar :  ₺" + ((result + 53400)));
+                    tvp750.setText("₺" + String.format( "%.2f",result));
+                    totalPrice.setText("Toplam Tutar :  ₺" + (String.format( "%.2f",result + 53400)));
                     break;
             }
         } else if (userinput <= 4420000) {
             switch (select1) {
                 case 0:
-                    tvp35.setText("₺3.000,00");
-                    tvp45.setText("₺4.000,00");
-                    tvp80.setText("₺5.200,00");
-                    tvp240.setText("₺7.800,00");
-                    tvp600.setText("₺15.600,00");
-                    tvp750.setText("₺15.600,00");
+                    tvp35.setText("₺3000.00");
+                    tvp45.setText("₺4000.00");
+                    tvp80.setText("₺5200.00");
+                    tvp240.setText("₺7800.00");
+                    tvp600.setText("₺15600.00");
+                    tvp750.setText("₺15600.00");
                     ratio = 0.01;
                     result = ((userinput - 2340000) * ratio);
-                    tvp1250.setText("₺" + (result));
-                    totalPrice.setText("Toplam Tutar :  ₺" + ((result + 51200)));
+                    tvp1250.setText("₺" + String.format( "%.2f",result));
+                    totalPrice.setText("Toplam Tutar :  ₺" + (String.format( "%.2f",result + 51200)));
                     break;
                 case 1:
-                    tvp35.setText("₺4.500,00");
-                    tvp45.setText("₺6.000,00");
-                    tvp80.setText("₺7.800,00");
-                    tvp240.setText("₺11.700,00");
-                    tvp600.setText("₺23.400,00");
-                    tvp750.setText("₺26.000,00");
+                    tvp35.setText("₺4500.00");
+                    tvp45.setText("₺6000.00");
+                    tvp80.setText("₺7800.00");
+                    tvp240.setText("₺11700.0");
+                    tvp600.setText("₺23400.00");
+                    tvp750.setText("₺26000.00");
                     ratio = 0.015;
                     result = ((userinput - 2340000) * ratio);
-                    tvp1250.setText("₺" + (result));
-                    totalPrice.setText("Toplam Tutar :  ₺" + ((result + 79400)));
+                    tvp1250.setText("₺" + String.format( "%.2f",result));
+                    totalPrice.setText("Toplam Tutar :  ₺" + (String.format( "%.2f",result + 79400)));
                     break;
             }
         } else if (userinput > 4420000) {
             switch (select1) {
                 case 0:
-                    tvp35.setText("₺3.000,00");
-                    tvp45.setText("₺4.000,00");
-                    tvp80.setText("₺5.200,00");
-                    tvp240.setText("₺7.800,00");
-                    tvp600.setText("₺15.600,00");
-                    tvp750.setText("₺15.600,00");
-                    tvp1250.setText("₺20.800,00");
+                    tvp35.setText("₺3000.00");
+                    tvp45.setText("₺4000.00");
+                    tvp80.setText("₺5200.00");
+                    tvp240.setText("₺7800.00");
+                    tvp600.setText("₺15600.00");
+                    tvp750.setText("₺15600.00");
+                    tvp1250.setText("₺20800.00");
                     ratio = 0.005;
                     result = ((userinput - 4420000) * ratio);
-                    tvp3000.setText("₺" + (result));
-                    totalPrice.setText("Toplam Tutar :  ₺" + ((result + 72000)));
+                    tvp3000.setText("₺" + String.format( "%.2f",result));
+                    totalPrice.setText("Toplam Tutar :  ₺" + (String.format( "%.2f",result + 72000)));
                     break;
                 case 1:
-                    tvp35.setText("₺4.500,00");
-                    tvp45.setText("₺6.000,00");
-                    tvp80.setText("₺7.800,00");
-                    tvp240.setText("₺11.700,0");
-                    tvp600.setText("₺23.400,00");
-                    tvp750.setText("₺26.000,00");
-                    tvp1250.setText("₺31.200,00");
+                    tvp35.setText("₺4500.00");
+                    tvp45.setText("₺6000.00");
+                    tvp80.setText("₺7800.00");
+                    tvp240.setText("₺11700.0");
+                    tvp600.setText("₺23400.00");
+                    tvp750.setText("₺26000.00");
+                    tvp1250.setText("₺31200.00");
                     ratio = 0.01;
                     result = ((userinput - 4420000) * ratio);
-                    //tvp1250.setText("₺"+(String.valueOf(result)));
-                    tvp3000.setText(result.toString());
-                    totalPrice.setText("Toplam Tutar :  ₺" + ((result + 110600)));
+                    tvp3000.setText("₺" + String.format( "%.2f",result));
+                    totalPrice.setText("Toplam Tutar :  ₺" + (String.format( "%.2f",result + 110600)));
                     break;
             }
         }
