@@ -1,1 +1,13 @@
-[{"firstTextFamily": "Aile Hukukujkh","firstTwoFamily": "340","firstThreeOrFiveFamily": "360","firstSixOrTenFamily": "380","firstElevenMoreFamily": "400"}]
+[
+  {
+    "firstfamily": 100.0,
+    "secondcommercial": 100.0,
+    "thirdworker": 100.0,
+    "fourthconsumer": 100.0,
+    "fifthother": 100.0,
+    "two": 100.0,
+    "five": 100.0,
+    "six": 100.0,
+    "elevenmore": 100.0
+  }
+]
